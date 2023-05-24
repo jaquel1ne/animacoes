@@ -1,0 +1,48 @@
+.titulo {
+    background-color: #e2afd5;
+    color: #810568;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    padding: 20px;
+}
+
+.titulo::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-image: url("heart-filled.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.titulo > p {
+    color: #850080;
+    font-weight: bold;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.coracao {
+    position: relative;
+    top: -100px;
+    animation: pulse 1s infinite;
+}
